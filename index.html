@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chaos</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+	 <section name="header">
+        <div class="ui inverted menu">
+            <a class="item">
+             Chaos in Javascript
+            </a>
+            <a class="item" target="_blank" href="">
+            <i class="github icon"></i> Star on GitHub
+            </a>
+        </div>
+    </section>
+
+    <section name="canvas">
+        <div class="ui placeholder segment">
+            <canvas id="mycanvas" width="800" height="600" style="display:block;margin:0 auto"></canvas>
+        </div>
+    </section>
+
+    <div id="container">
+        <div class="ui floating message">
+            Enter number of bigger vertices: 
+            <div class="ui input focus">
+                <input id="nthsidedpolygon" type="number" placeholder="must be greater than 2" style="width:200px"/>
+            </div>
+            <br/>
+            Enter %age of distance to travel: 
+            <div class="ui input focus">
+                <input id="distratio" type="number" placeholder="Try 61.8 i.e GoldenRatio Inverse" style="width:200px"/>
+            </div>
+            <br/>
+        </div>
+        <button class="ui primary button" onclick="playByUser()">
+            See Magic!!
+        </button>
+        
+        <div class="ui divider"></div>
+
+        <div class="ui styled accordion">
+            <div class="active title">
+                <i class="dropdown icon"></i>
+                How this works?
+            </div>
+            <div class="active content">
+                <ul class="list">
+                    <li>We start with a random point.</li>
+                    <li>In each step, we chose randomly one of the bigger vertex and move 50% (or what ever %age you specified) towards it from our current position.</li>
+                    <li>We keep repeating the previous step till infinity.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section name="footer">
+        <div class="ui inverted borderless menu">
+            <a class="item footer-menu" href="https://bit.ly/rachityoutube">
+                Tushant Bhaskar
+            </a>
+        </div>
+    </section>
+
+    
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
